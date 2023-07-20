@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -54,9 +59,8 @@ body {
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  overflow: scroll;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .loader {
