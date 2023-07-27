@@ -277,6 +277,18 @@ function MovieDetails({ selectedID, onCloseMovie, onAddWatched, watched }) {
 
   useEffect(
     function () {
+      if (!title) return;
+      document.title = `Movie | ${title}`;
+
+      return function () {
+        document.title = "popcornTime";
+      };
+    },
+    [title]
+  );
+
+  useEffect(
+    function () {
       async function getMovieDetails() {
         SetIsLoading(true);
         const res = await fetch(
